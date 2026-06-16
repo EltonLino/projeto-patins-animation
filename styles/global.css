@@ -41,3 +41,8 @@ h2{
 html{
     font: var(--ff-base);
 }
+
+body{
+    max-width: 80em;
+    margin-inline: auto;
+}

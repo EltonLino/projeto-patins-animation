@@ -1,0 +1,61 @@
+.hero{
+    width: 100vw;
+    height: 35.5rem;
+}
+
+.container-h1{
+    max-width: 43.5rem;
+    margin-block: 9rem;
+    margin-left: 2rem;
+    margin-right: auto;
+}
+
+
+h1 .animation{
+    display: inline-block;
+    height: 5rem;
+    width: min-content;
+    overflow: hidden;
+    vertical-align: bottom;
+
+    & span{
+        display: block;
+        animation: fade-in 5s infinite ease;
+    };
+    
+
+    & span:nth-child(1){
+        color: var(--snitap-sky-mid);
+    }
+
+    & span:nth-child(2){
+        color: var(--snitap-joy-mid);
+    }
+
+    & span:nth-child(3){
+        color: var(--snitap-leaf-mid);
+    }
+
+    & span:nth-child(4){
+        color: var(--snitap-sky-mid);
+    }
+}
+
+@keyframes fade-in {
+  0% { transform: translateY(0); }
+  5% { transform: translateY(-7rem); }
+  10% { transform: translateY(-5rem); }
+  15% { transform: translateY(-6rem); }
+  20%, 35% { transform: translateY(-5rem); }
+  40% { transform: translateY(-12rem); }
+  45% { transform: translateY(-10rem); }
+  50% { transform: translateY(-11rem); }
+  55%, 70% { transform: translateY(-10rem); }
+  75% { transform: translateY(-17rem); }
+  80% { transform: translateY(-15rem); }
+  85% { transform: translateY(-16rem); }
+  90%, 100% { transform: translateY(-15rem); }
+}
+
+
+
