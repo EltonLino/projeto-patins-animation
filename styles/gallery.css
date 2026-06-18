@@ -1,0 +1,45 @@
+.gallery{
+    max-width: 80em;
+    margin-inline: auto;
+
+    & header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .content{
+        gap: 2rem;
+        
+        & img{
+            width: 100%;
+            height: auto;
+        }
+    
+        & figure {
+            display: flex;
+            justify-content: end;
+            position: relative;
+    
+                & img{
+                    border-radius: 2.5rem;
+                }
+        }
+    
+        & figcaption{
+            gap: .5rem;
+            align-items: center;
+            position: absolute;
+            bottom: 2rem;
+            padding-inline: 2rem;
+    
+            & img{
+                width: 2rem;
+                height: 2rem;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+            }
+        }
+    }
+    }
