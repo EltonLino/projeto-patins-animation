@@ -11,28 +11,75 @@
 
     .content{
         gap: 2rem;
+        grid-template-areas: 
+        "A B B"
+        "C C D";
         
-        & img{
+        & img {
             width: 100%;
-            height: auto;
+            height: 25rem;
+            object-fit: cover;
+            transition: 500ms;
+
         }
     
         & figure {
             display: flex;
             justify-content: end;
             position: relative;
-    
+            overflow: hidden;
+            border-radius: 2.5rem;
+            
+            animation: appear-bg linear backwards;
+            animation-timeline: view();
+            animation-range: 200px 350px;
+
+            &[data-delay]{
+                animation-range: 250px 400px;
+            }
+
+            &:nth-child(1){
+                grid-area: A;
+            }
+
+            &:nth-child(2){
+                grid-area: B;
+            }
+
+            &:nth-child(3){
+                grid-area: C;
+            }
+
+            &:nth-child(4){
+                grid-area: D;
+            }
+
+            &:hover{
+
                 & img{
-                    border-radius: 2.5rem;
+                    scale: 1.1;
                 }
+
+                & figcaption{
+                    transform: translateY(0);
+                }
+            }
         }
+
+        
     
         & figcaption{
             gap: .5rem;
             align-items: center;
             position: absolute;
-            bottom: 2rem;
-            padding-inline: 2rem;
+            bottom: 0;
+            padding: 1.5rem;
+            transition: 500ms;
+            width: 100%;
+            justify-content: end;
+            background-color: rgba(0, 0, 0, 0.163);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.299);
+            transform: translateY(100%);
     
             & img{
                 width: 2rem;
@@ -40,6 +87,18 @@
                 aspect-ratio: 1/1;
                 border-radius: 50%;
             }
+
+            & span{
+                color: #ffffff;
+                font: var(--ff-base-sm);
+            }
         }
     }
+    }
+
+    @keyframes appear-bg {
+       from{
+        opacity: 0;
+        transform: translateY(100%);
+       }
     }
